@@ -1,0 +1,49 @@
+{
+  "name": "arvis-tldr-workflow",
+  "version": "0.0.1",
+  "description": "arvis workflow for TLDR docs",
+  "license": "MIT",
+  "author": {
+    "name": "Alex LaFroscia",
+    "email": "alex@lafroscia.com",
+    "url": "https://github.com/alexlafroscia"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "test": "NODE_ENV=test ava",
+    "cache:clear": "./bin/clear-cache.sh",
+    "cache:view": "./bin/view-cache.sh",
+    "postinstall": "arvish-init",
+    "preuninstall": "arvish-cleanup",
+    "prepublishOnly": "arvish-prepublish"
+  },
+  "files": [
+    "index.js",
+    "icon.png",
+    "arvis-workflow.json"
+  ],
+  "keywords": [
+    "arvis",
+    "arvis-workflow",
+    "workflow",
+    "arvish"
+  ],
+  "dependencies": {
+    "arvish": ">=0.6.1",
+    "tldr": "^3.3.2"
+  },
+  "devDependencies": {
+    "ava": "3.13.0",
+    "eslint": "^7.12.1",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-ava": "^11.0.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "nock": "^13.0.4",
+    "prettier": "^2.1.2"
+  },
+  "volta": {
+    "node": "10.23.0",
+    "yarn": "1.22.10"
+  }
+}

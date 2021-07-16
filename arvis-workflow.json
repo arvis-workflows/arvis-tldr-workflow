@@ -1,0 +1,35 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jopemachine/arvis-extension-validator/master/workflow-schema.json",
+  "defaultIcon": "icon.png",
+  "category": "Tools",
+  "creator": "Alex LaFroscia",
+  "description": "Search TLDR docs",
+  "name": "arvis-tldr-workflow",
+  "readme": "",
+  "version": "0.0.1",
+  "variables": {
+    "username": "",
+    "password": ""
+  },
+  "webAddress": "https://github.com/arvis-workflows/arvis-tldr-workflow",
+  "enabled": true,
+  "commands": [
+    {
+      "type": "scriptFilter",
+      "command": "tldr",
+      "title": "TLDR",
+      "subtitle": "",
+      "scriptFilter": "node index.js \"{query}\"",
+      "runningSubtext": "Searching...",
+      "withspace": true,
+      "argType": "required",
+      "actions": [
+        {
+          "modifiers": "normal",
+          "type": "open",
+          "target": "{query}"
+        }
+      ]
+    }
+  ]
+}
